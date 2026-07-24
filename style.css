@@ -284,7 +284,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 [data-theme="dark"] .storyboard-table td{border-color:rgba(255,255,255,0.08);}
 .storyboard-table tr:nth-child(even){background:rgba(12,60,120,0.03);}
 .simple-table{min-width:0;}
-.objek-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.objek-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:50px; /* Tambahkan ini */
+}
 .objek-item{text-align:center;padding:20px 14px;border-radius:14px;background:rgba(12,60,120,0.04);}
 [data-theme="dark"] .objek-item{background:rgba(255,255,255,0.04);}
 .objek-item img{

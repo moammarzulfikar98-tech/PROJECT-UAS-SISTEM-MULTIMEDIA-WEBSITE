@@ -311,7 +311,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 }
 .objek-item h4{font-size:13.5px;margin-bottom:6px;}
 .objek-item p{font-size:12px;line-height:1.5;}
-.wireframe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.wireframe-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:30px;
+}
 .wireframe-item{background:rgba(12,60,120,0.03);border-radius:14px;padding:18px;}
 [data-theme="dark"] .wireframe-item{background:rgba(255,255,255,0.04);}
 .wireframe-item h4{font-size:13.5px;margin-bottom:10px;color:var(--pln-blue);}

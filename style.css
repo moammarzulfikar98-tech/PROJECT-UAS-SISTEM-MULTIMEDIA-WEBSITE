@@ -310,7 +310,39 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     box-shadow:0 12px 24px rgba(12,60,120,.18);
 }
 .objek-item h4{font-size:13.5px;margin-bottom:6px;}
-.objek-item p{font-size:12px;line-height:1.5;}
+.objek-item p{
+    font-size:12px;
+    line-height:1.5;
+}
+
+/* ===== Referensi ===== */
+
+.referensi-list{
+    margin:12px 0 28px 22px;
+    color:var(--text-soft);
+}
+
+.referensi-list li{
+    margin-bottom:10px;
+    line-height:1.8;
+}
+
+.referensi-list a{
+    color:var(--pln-blue-light);
+    text-decoration:none;
+    transition:.3s;
+}
+
+.referensi-list a:hover{
+    color:var(--pln-blue);
+    text-decoration:underline;
+}
+
+.wireframe-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 .wireframe-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);

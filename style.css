@@ -287,7 +287,23 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .objek-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 .objek-item{text-align:center;padding:20px 14px;border-radius:14px;background:rgba(12,60,120,0.04);}
 [data-theme="dark"] .objek-item{background:rgba(255,255,255,0.04);}
-.objek-item i{font-size:22px;color:var(--pln-blue-light);margin-bottom:10px;}
+.objek-item img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 16px;
+    padding:6px;
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 6px 16px rgba(12,60,120,.12);
+    transition:all .3s ease;
+}
+
+.objek-item:hover img{
+    transform:translateY(-4px) scale(1.06);
+    box-shadow:0 12px 24px rgba(12,60,120,.18);
+}
 .objek-item h4{font-size:13.5px;margin-bottom:6px;}
 .objek-item p{font-size:12px;line-height:1.5;}
 .wireframe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}

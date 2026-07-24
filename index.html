@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLN Mobile Interactive Learning</title>
+<meta name="description" content="Microsite edukasi interaktif penggunaan aplikasi PLN Mobile">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loading-screen">
+  <div class="loader-bolt">
+    <svg viewBox="0 0 100 100" width="80" height="80">
+      <polygon points="55,2 20,58 45,58 40,98 82,40 55,40" fill="#FFD100"/>
+    </svg>
+  </div>
+  <p>Menyalakan pengalaman...</p>
+</div>
+
+<!-- ============ PROGRESS BAR ============ -->
+<div id="progress-bar"></div>
+
+<!-- ============ NAVBAR ============ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <svg viewBox="0 0 100 100" width="34" height="34"><polygon points="55,2 20,58 45,58 40,98 82,40 55,40" fill="#FFD100"/></svg>
+      <span>PLN <strong>Mobile</strong></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Beranda</a></li>
+      <li><a href="#tentang" class="nav-link">Tentang</a></li>
+      <li><a href="#fitur" class="nav-link">Fitur</a></li>
+      <li><a href="#simulasi" class="nav-link">Simulasi</a></li>
+      <li><a href="#tutorial" class="nav-link">Tutorial</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#tips" class="nav-link">Tips</a></li>
+      <li><a href="#quiz" class="nav-link">Quiz</a></li>
+      <li><a href="#statistik" class="nav-link">Statistik</a></li>
+      <li><a href="#kontak" class="nav-link">Kontak</a></li>
+      <li><a href="#konsep" class="nav-link nav-link-alt">Konsep Multimedia</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="dark-toggle" aria-label="Ganti mode gelap"><i class="fa-solid fa-moon"></i></button>
+      <button id="nav-burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ 1. HERO / LANDING ============ -->
+<section id="home" class="hero">
+  <canvas id="electric-canvas"></canvas>
+  <div class="hero-content" data-aos="fade-up">
+    <div class="hero-logo">
+      <svg viewBox="0 0 100 100" width="70" height="70"><polygon points="55,2 20,58 45,58 40,98 82,40 55,40" fill="#FFD100"/></svg>
+    </div>
+    <h1>PLN Mobile <span>Interactive Learning</span></h1>
+    <p class="subtitle">Belajar menggunakan seluruh fitur PLN Mobile secara interaktif — bukan cuma baca, tapi coba langsung simulasinya.</p>
+    <div class="hero-actions">
+      <a href="#fitur" class="btn btn-primary">Mulai Belajar <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#simulasi" class="btn btn-ghost">Coba Simulasi</a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span><p>Scroll</p></div>
+</section>
+
+<!-- ============ 2. TENTANG PLN MOBILE ============ -->
+<section id="tentang" class="section">
+  <div class="container grid-2">
+    <div data-aos="fade-right">
+      <h2>Apa itu <span>PLN Mobile?</span></h2>
+      <p class="lead">PLN Mobile adalah aplikasi resmi PT PLN (Persero) yang menghadirkan seluruh layanan kelistrikan dalam satu genggaman, mulai dari pembelian token, pembayaran tagihan, hingga pelaporan gangguan.</p>
+      <div class="feature-points">
+        <div class="point"><i class="fa-solid fa-bolt"></i><div><h4>Fungsi Utama</h4><p>Mengelola listrik rumah tanpa perlu ke kantor PLN.</p></div></div>
+        <div class="point"><i class="fa-solid fa-clock"></i><div><h4>Manfaat</h4><p>Hemat waktu, transaksi 24 jam, transparan & real-time.</p></div></div>
+        <div class="point"><i class="fa-solid fa-users"></i><div><h4>Kenapa Penting</h4><p>Digunakan jutaan pelanggan di seluruh Indonesia setiap hari.</p></div></div>
+      </div>
+    </div>
+    <div class="illustration" data-aos="fade-left">
+      <svg viewBox="0 0 400 400" class="svg-illustration">
+        <circle cx="200" cy="200" r="170" fill="url(#gradTentang)"/>
+        <rect x="140" y="90" width="120" height="220" rx="24" fill="#0C3C78"/>
+        <rect x="150" y="110" width="100" height="160" rx="8" fill="#eaf3ff"/>
+        <circle cx="200" cy="285" r="10" fill="#FFD100"/>
+        <polygon points="215,140 185,190 200,190 190,230 225,175 205,175" fill="#FFD100"/>
+        <defs><linearGradient id="gradTentang" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf3ff"/><stop offset="1" stop-color="#cfe4ff"/></linearGradient></defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. FITUR ============ -->
+<section id="fitur" class="section section-alt">
+  <div class="container">
+
+    <h2 class="center">Fitur Unggulan <span>PLN Mobile</span></h2>
+    <p class="lead center">Klik setiap kartu untuk melihat penjelasan lengkap fiturnya.</p>
+    <div class="feature-grid" id="feature-grid">
+      <!-- cards injected/kept static, see script.js for modal data -->
+      <div class="feature-card" data-feature="token" data-aos="fade-up">
+        <div class="fc-icon"><i class="fa-solid fa-coins"></i></div>
+        <h3>Pembelian Token Listrik</h3>
+        <p>Beli token listrik prabayar kapan saja.</p>
+      </div>
+      <div class="feature-card" data-feature="tagihan" data-aos="fade-up" data-aos-delay="50">
+        <div class="fc-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>Pembayaran Tagihan</h3>
+        <p>Bayar tagihan listrik pascabayar bulanan.</p>
+      </div>
+      <div class="feature-card" data-feature="gangguan" data-aos="fade-up" data-aos-delay="100">
+        <div class="fc-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3>Pelaporan Gangguan</h3>
+        <p>Laporkan gangguan listrik di sekitar rumah.</p>
+      </div>
+      <div class="feature-card" data-feature="pasangbaru" data-aos="fade-up" data-aos-delay="150">
+        <div class="fc-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+        <h3>Permohonan Pasang Baru</h3>
+        <p>Ajukan pemasangan listrik baru dari rumah.</p>
+      </div>
+      <div class="feature-card" data-feature="tambahdaya" data-aos="fade-up" data-aos-delay="200">
+        <div class="fc-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Tambah Daya</h3>
+        <p>Naikkan daya listrik sesuai kebutuhan.</p>
+      </div>
+      <div class="feature-card" data-feature="monitoring" data-aos="fade-up" data-aos-delay="250">
+        <div class="fc-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Monitoring Pengaduan</h3>
+        <p>Pantau status laporan yang telah dikirim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Modal -->
+<div class="modal-overlay" id="feature-modal-overlay">
+  <div class="modal" id="feature-modal">
+    <button class="modal-close" id="feature-modal-close"><i class="fa-solid fa-xmark"></i></button>
+    <div id="feature-modal-body"></div>
+  </div>
+</div>
+
+<!-- ============ 4. SIMULASI INTERAKTIF ============ -->
+<section id="simulasi" class="section">
+  <div class="container">
+
+    <h2 class="center">Simulasi <span>Interaktif</span></h2>
+
+    <div class="sim-tabs" id="sim-tabs">
+      <button class="sim-tab active" data-sim="token">Beli Token</button>
+      <button class="sim-tab" data-sim="bayar">Bayar Tagihan</button>
+      <button class="sim-tab" data-sim="gangguan">Lapor Gangguan</button>
+      <button class="sim-tab" data-sim="tambahdaya">Tambah Daya</button>
+      <button class="sim-tab" data-sim="pasangbaru">Pasang Baru</button>
+    </div>
+
+    <div class="sim-panel-wrap glass" data-aos="zoom-in">
+
+      <!-- Simulasi Token -->
+      <div class="sim-panel active" id="sim-token">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <h4><i class="fa-solid fa-coins"></i> Beli Token Listrik</h4>
+            <label>Nomor Meter</label>
+            <input type="text" id="token-meter" placeholder="Contoh: 5201xxxxxxxx" maxlength="12">
+            <label>Nominal Token</label>
+            <select id="token-nominal">
+              <option value="20000">Rp 20.000</option>
+              <option value="50000">Rp 50.000</option>
+              <option value="100000">Rp 100.000</option>
+              <option value="200000">Rp 200.000</option>
+              <option value="500000">Rp 500.000</option>
+            </select>
+            <button class="btn btn-primary full" onclick="simBeliToken()">Beli Sekarang</button>
+            <div class="sim-result" id="token-result"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulasi Bayar -->
+      <div class="sim-panel" id="sim-bayar">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <h4><i class="fa-solid fa-file-invoice-dollar"></i> Bayar Tagihan</h4>
+            <label>ID Pelanggan</label>
+            <input type="text" id="bayar-id" placeholder="Contoh: 530112345678">
+            <button class="btn btn-outline full" onclick="simCekTagihan()">Cek Tagihan</button>
+            <div class="sim-result" id="bayar-tagihan-box"></div>
+            <button class="btn btn-primary full" id="bayar-btn" style="display:none" onclick="simBayarTagihan()">Bayar Sekarang</button>
+            <div class="sim-result" id="bayar-result"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulasi Gangguan -->
+      <div class="sim-panel" id="sim-gangguan">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <h4><i class="fa-solid fa-triangle-exclamation"></i> Laporkan Gangguan</h4>
+            <label>Nama</label>
+            <input type="text" id="gangguan-nama" placeholder="Nama lengkap">
+            <label>Alamat</label>
+            <input type="text" id="gangguan-alamat" placeholder="Alamat lokasi gangguan">
+            <label>Jenis Gangguan</label>
+            <select id="gangguan-jenis">
+              <option>Listrik Padam Total</option>
+              <option>Tegangan Tidak Stabil</option>
+              <option>Meteran Rusak</option>
+              <option>Kabel Putus</option>
+              <option>Trafo Bermasalah</option>
+            </select>
+            <label>Upload Foto (dummy)</label>
+            <div class="upload-box" id="upload-box" onclick="document.getElementById('gangguan-foto').click()">
+              <i class="fa-solid fa-camera"></i><span id="upload-label">Klik untuk unggah foto</span>
+            </div>
+            <input type="file" id="gangguan-foto" hidden accept="image/*">
+            <button class="btn btn-primary full" onclick="simLaporGangguan()">Kirim Laporan</button>
+            <div class="sim-result" id="gangguan-result"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulasi Tambah Daya -->
+      <div class="sim-panel" id="sim-tambahdaya">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <h4><i class="fa-solid fa-gauge-high"></i> Tambah Daya</h4>
+            <label>Pilih Daya Baru</label>
+            <div class="daya-options" id="daya-options">
+              <button class="daya-btn" data-va="450">450 VA</button>
+              <button class="daya-btn" data-va="900">900 VA</button>
+              <button class="daya-btn" data-va="1300">1300 VA</button>
+              <button class="daya-btn" data-va="2200">2200 VA</button>
+              <button class="daya-btn" data-va="3500">3500 VA</button>
+              <button class="daya-btn" data-va="5500">5500 VA</button>
+            </div>
+            <div class="sim-result" id="daya-result"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulasi Pasang Baru -->
+      <div class="sim-panel" id="sim-pasangbaru">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <h4><i class="fa-solid fa-plug-circle-bolt"></i> Pasang Baru</h4>
+            <label>Nama Pemohon</label>
+            <input type="text" id="pb-nama" placeholder="Nama lengkap">
+            <label>Alamat</label>
+            <input type="text" id="pb-alamat" placeholder="Alamat pemasangan">
+            <label>Daya yang Diinginkan</label>
+            <select id="pb-daya">
+              <option>450 VA</option><option>900 VA</option><option>1300 VA</option><option>2200 VA</option>
+            </select>
+            <button class="btn btn-primary full" onclick="simPasangBaru()">Ajukan Permohonan</button>
+            <div class="sim-result" id="pasangbaru-result"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. TUTORIAL ============ -->
+<section id="tutorial" class="section section-alt">
+  <div class="container">
+    <h2 class="center">Tutorial <span>Penggunaan</span></h2>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-content"><h4>Unduh & Daftar</h4><p>Unduh PLN Mobile di Play Store/App Store, lalu daftar menggunakan ID Pelanggan atau nomor meter.</p></div>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-dot">2</div>
+        <div class="timeline-content"><h4>Verifikasi Akun</h4><p>Masukkan kode OTP yang dikirim ke nomor HP terdaftar untuk mengaktifkan akun.</p></div>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-dot">3</div>
+        <div class="timeline-content"><h4>Tambahkan Meter/ID Pelanggan</h4><p>Hubungkan nomor meter atau ID pelanggan rumah ke akun agar bisa bertransaksi.</p></div>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="timeline-dot">4</div>
+        <div class="timeline-content"><h4>Pilih Layanan</h4><p>Buka menu utama, pilih layanan seperti Token, Tagihan, atau Pengaduan.</p></div>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="timeline-dot">5</div>
+        <div class="timeline-content"><h4>Selesaikan Transaksi</h4><p>Ikuti langkah pada aplikasi hingga muncul notifikasi berhasil.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. FAQ ============ -->
+<section id="faq" class="section">
+  <div class="container">
+    <h2 class="center">Pertanyaan <span>Umum</span></h2>
+    <div class="accordion" id="accordion">
+      <!-- items injected via script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. TIPS ============ -->
+<section id="tips" class="section section-alt">
+  <div class="container">
+    <h2 class="center">Tips Menggunakan <span>PLN Mobile</span></h2>
+    <div class="tips-grid">
+      <div class="tip-card" data-aos="flip-left"><i class="fa-solid fa-bell"></i><h4>Aktifkan Notifikasi</h4><p>Agar tidak ketinggalan info token hampir habis atau tagihan jatuh tempo.</p></div>
+      <div class="tip-card" data-aos="flip-left" data-aos-delay="80"><i class="fa-solid fa-wallet"></i><h4>Simpan Metode Bayar</h4><p>Tambahkan e-wallet/kartu agar transaksi lebih cepat.</p></div>
+      <div class="tip-card" data-aos="flip-left" data-aos-delay="160"><i class="fa-solid fa-fingerprint"></i><h4>Gunakan Biometrik</h4><p>Login lebih aman & cepat dengan sidik jari/Face ID.</p></div>
+      <div class="tip-card" data-aos="flip-left" data-aos-delay="240"><i class="fa-solid fa-house-signal"></i><h4>Cek Status Gangguan</h4><p>Pantau progres laporan gangguan secara real-time.</p></div>
+      <div class="tip-card" data-aos="flip-left" data-aos-delay="320"><i class="fa-solid fa-chart-line"></i><h4>Pantau Pemakaian</h4><p>Gunakan fitur riwayat token untuk memantau pola konsumsi listrik.</p></div>
+      <div class="tip-card" data-aos="flip-left" data-aos-delay="400"><i class="fa-solid fa-share-nodes"></i><h4>Bagikan ke Keluarga</h4><p>Ajak keluarga di rumah memakai PLN Mobile juga.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. QUIZ ============ -->
+<section id="quiz" class="section">
+  <div class="container">
+    <h2 class="center">Quiz <span>Interaktif</span></h2>
+
+    <div class="quiz-wrap glass" data-aos="zoom-in">
+      <div id="quiz-intro" class="quiz-stage">
+        <i class="fa-solid fa-bolt quiz-big-icon"></i>
+        <h3>Seberapa paham kamu dengan PLN Mobile?</h3>
+        <p>10 soal pilihan ganda. Yuk uji pemahamanmu!</p>
+        <button class="btn btn-primary" onclick="startQuiz()">Mulai Quiz</button>
+      </div>
+
+      <div id="quiz-question" class="quiz-stage" style="display:none">
+        <div class="quiz-progress"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+        <p class="quiz-count" id="quiz-count">Soal 1/10</p>
+        <h3 id="quiz-question-text"></h3>
+        <div class="quiz-options" id="quiz-options"></div>
+      </div>
+
+      <div id="quiz-result" class="quiz-stage" style="display:none">
+        <i class="fa-solid fa-trophy quiz-big-icon"></i>
+        <h3>Quiz Selesai!</h3>
+        <p class="quiz-score" id="quiz-score-text"></p>
+        <div class="quiz-score-ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring-bg"/><circle cx="60" cy="60" r="52" class="ring-fill" id="quiz-ring"/></svg><span id="quiz-percent"></span></div>
+        <button class="btn btn-primary" onclick="startQuiz()">Ulangi Quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. STATISTIK ============ -->
+<section id="statistik" class="section section-alt">
+  <div class="container">
+    <h2 class="center">Statistik <span>Penggunaan (Dummy)</span></h2>
+    <div class="stat-grid">
+      <div class="stat-card" data-aos="fade-up"><h3 id="stat-pengguna">0</h3><p>Pengguna PLN Mobile</p></div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="80"><h3 id="stat-token">0</h3><p>Transaksi Token/bulan</p></div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="160"><h3 id="stat-gangguan">0</h3><p>Laporan Gangguan/bulan</p></div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="240"><h3 id="stat-bayar">0</h3><p>Pembayaran/bulan</p></div>
+    </div>
+    <div class="chart-wrap glass" data-aos="fade-up">
+      <canvas id="statsChart" height="110"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. KONTAK ============ -->
+<section id="kontak" class="section">
+  <div class="container grid-2">
+    <div data-aos="fade-right">
+      <h2>Kontak <span>PLN</span></h2>
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i><p>Jl. Trunojoyo Blok M I No.135, Kebayoran Baru, Jakarta Selatan</p></div>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i><p>pln123@pln.co.id</p></div>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i><p>123 (Contact Center PLN)</p></div>
+      <div class="map-dummy">
+        <svg viewBox="0 0 400 220" width="100%">
+          <rect width="400" height="220" fill="#dfeaff"/>
+          <path d="M0 150 Q100 100 200 150 T400 140" stroke="#0C3C78" stroke-width="4" fill="none" opacity="0.5"/>
+          <path d="M0 90 Q120 140 260 80 T400 100" stroke="#0C3C78" stroke-width="3" fill="none" opacity="0.3"/>
+          <circle cx="210" cy="110" r="10" fill="#0C3C78"/>
+          <polygon points="210,60 197,90 205,90 200,120 225,85 213,85" fill="#FFD100"/>
+          <text x="200" y="200" text-anchor="middle" fill="#0C3C78" font-size="14" font-family="Poppins">Peta Lokasi (Dummy)</text>
+        </svg>
+      </div>
+    </div>
+    <div class="contact-form glass" data-aos="fade-left">
+      <h3>Kirim Pesan</h3>
+      <label>Nama</label>
+      <input type="text" id="cf-nama" placeholder="Nama Anda">
+      <label>Email</label>
+      <input type="email" id="cf-email" placeholder="email@contoh.com">
+      <label>Pesan</label>
+      <textarea id="cf-pesan" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+      <button class="btn btn-primary full" onclick="simKirimKontak()">Kirim Pesan</button>
+      <div class="sim-result" id="kontak-result"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONSEP MULTIMEDIA ============ -->
+<section id="konsep" class="section konsep-section">
+  <div class="container">
+    <h2 class="center">Konsep <span>Multimedia</span></h2>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>A. Judul Produk</h3>
+      <p>PLN Mobile Interactive Learning</p>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>B. Identitas Mahasiswa</h3>
+      <p>Nama: <span class="placeholder-fill">Moammar Zulfikar Amir</span></p>
+      <p>NIM: <span class="placeholder-fill">202531167</span></p>
+      <p>Program Studi: Teknik Informatika — Institut Teknologi PLN</p>
+      <p>Mata Kuliah: Sistem Multimedia (UAS)</p>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>C. Tujuan Komunikasi</h3>
+      <p>Website ini bertujuan menyampaikan informasi mengenai fungsi dan manfaat aplikasi PLN Mobile kepada masyarakat umum melalui media interaktif berbasis web, sehingga pengguna tidak hanya membaca teori penggunaan aplikasi, tetapi juga dapat mempraktikkan simulasi fitur secara langsung. Pendekatan interaktif ini dipilih karena sesuai dengan prinsip komunikasi multimedia yang menekankan keterlibatan aktif pengguna (active engagement) dibandingkan komunikasi satu arah, sehingga pesan yang disampaikan lebih mudah dipahami, diingat, dan diterapkan dalam kehidupan sehari-hari.</p>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>D. Pesan Utama</h3>
+      <p>"PLN Mobile memudahkan seluruh urusan kelistrikan rumah tangga—dari beli token hingga lapor gangguan—cukup dari satu genggaman smartphone, kapan saja dan di mana saja."</p>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>E. Sinopsis</h3>
+      <p>PLN Mobile Interactive Learning adalah sebuah microsite edukasi yang dirancang menyerupai aplikasi resmi PT PLN (Persero) dalam bentuk pengalaman berbasis web. Pengunjung disambut oleh halaman utama bertema kelistrikan modern dengan animasi visual yang menggambarkan aliran energi, sebelum diarahkan menelusuri setiap bagian situs secara berurutan dan logis. Pada bagian awal, pengguna diperkenalkan pada definisi, fungsi, dan manfaat aplikasi PLN Mobile bagi masyarakat luas, dilengkapi ilustrasi vektor yang memperjelas konsep abstrak menjadi visual yang mudah dicerna. Selanjutnya, pengguna diajak menjelajahi enam fitur utama aplikasi melalui kartu interaktif yang dapat diklik untuk membuka penjelasan rinci masing-masing layanan. Bagian inti dari situs ini terletak pada modul simulasi, tempat pengguna benar-benar mempraktikkan alur pembelian token, pembayaran tagihan, pelaporan gangguan, permohonan tambah daya, dan pengajuan pasang baru, semuanya menggunakan data tiruan tanpa risiko transaksi nyata. Untuk memperkuat pemahaman, disediakan pula tutorial bertahap berbentuk garis waktu, kumpulan pertanyaan umum dalam format akordeon, serta kartu tips praktis penggunaan sehari-hari. Sebagai bentuk evaluasi mandiri, pengguna dapat mengikuti kuis interaktif berisi sepuluh soal pilihan ganda yang menampilkan skor akhir secara visual. Situs ini juga menyajikan statistik penggunaan aplikasi dalam bentuk grafik untuk memberi gambaran skala adopsi PLN Mobile di masyarakat, ditutup dengan bagian kontak resmi dan formulir pesan. Keseluruhan pengalaman dirancang dengan gaya visual glassmorphism, palet warna biru-putih-kuning khas identitas PLN, animasi halus, serta struktur responsif agar nyaman diakses dari perangkat apa pun.</p>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>F. Storyboard</h3>
+      <div class="table-wrap">
+        <table class="storyboard-table">
+          <thead><tr><th>Scene</th><th>Visual</th><th>Audio</th><th>Animasi</th><th>Interaksi</th></tr></thead>
+          <tbody id="storyboard-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>G. Desain Karakter / Objek</h3>
+      <div class="objek-grid">
+        <div class="objek-item"><i class="fa-solid fa-bolt"></i><h4>Ikon Petir/Token</h4><p>Melambangkan energi listrik dan identitas visual PLN; digunakan sebagai logo dan aksen aksi utama.</p></div>
+        <div class="objek-item"><i class="fa-solid fa-mobile-screen"></i><h4>Smartphone</h4><p>Merepresentasikan media aplikasi; wadah utama seluruh simulasi fitur berlangsung.</p></div>
+        <div class="objek-item"><i class="fa-solid fa-user-tie"></i><h4>Petugas PLN</h4><p>Menghadirkan unsur layanan manusia di balik proses teknis, membangun kepercayaan pengguna.</p></div>
+        <div class="objek-item"><i class="fa-solid fa-house"></i><h4>Rumah</h4><p>Objek tujuan distribusi listrik; konteks nyata penggunaan aplikasi oleh masyarakat.</p></div>
+        <div class="objek-item"><i class="fa-solid fa-tower-observation"></i><h4>Tiang Listrik</h4><p>Melambangkan infrastruktur distribusi daya dari PLN menuju rumah pelanggan.</p></div>
+        <div class="objek-item"><i class="fa-solid fa-plug"></i><h4>Kabel</h4><p>Penghubung visual antar elemen; simbol aliran data maupun aliran listrik.</p></div>
+        <div class="objek-item"><i class="fa-solid fa-coins"></i><h4>Token</h4><p>Representasi produk digital pulsa listrik yang dibeli pengguna.</p></div>
+        <div class="objek-item"><i class="fa-solid fa-gauge"></i><h4>Meteran</h4><p>Alat ukur konsumsi listrik; objek acuan input nomor meter dalam simulasi.</p></div>
+      </div>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>H. Sketsa Antarmuka (Wireframe ASCII)</h3>
+      <div class="wireframe-grid">
+        <div class="wireframe-item">
+          <h4>Landing</h4>
+          <pre>┌─────────────────────────┐
+│ LOGO      NAVBAR MENU    │
+├─────────────────────────┤
+│        [ Logo Besar ]    │
+│     PLN Mobile Learning  │
+│        subtitle...       │
+│   [Mulai Belajar] [Coba] │
+│          ↓ scroll        │
+└─────────────────────────┘</pre>
+        </div>
+        <div class="wireframe-item">
+          <h4>Fitur</h4>
+          <pre>┌─────────────────────────┐
+│      Judul Section       │
+│  [Card][Card][Card]      │
+│  [Card][Card][Card]      │
+│  (klik → modal popup)    │
+└─────────────────────────┘</pre>
+        </div>
+        <div class="wireframe-item">
+          <h4>Simulasi</h4>
+          <pre>┌─────────────────────────┐
+│ [Tab1][Tab2][Tab3][Tab4] │
+│  ┌───────────────┐       │
+│  │  Phone Frame  │       │
+│  │  form input   │       │
+│  │  [tombol aksi]│       │
+│  │  hasil dummy  │       │
+│  └───────────────┘       │
+└─────────────────────────┘</pre>
+        </div>
+        <div class="wireframe-item">
+          <h4>Quiz</h4>
+          <pre>┌─────────────────────────┐
+│   Soal 1/10  [progress]  │
+│   Pertanyaan...          │
+│   ( ) opsi A              │
+│   ( ) opsi B              │
+│   ( ) opsi C              │
+│   ( ) opsi D              │
+└─────────────────────────┘</pre>
+        </div>
+        <div class="wireframe-item">
+          <h4>Kontak</h4>
+          <pre>┌─────────────────────────┐
+│ Alamat/Email/Telp  |Form │
+│ [Peta Dummy]       |Nama │
+│                    |Email│
+│                    |Pesan│
+│                    |[Kirim]
+└─────────────────────────┘</pre>
+        </div>
+        <div class="wireframe-item">
+          <h4>Footer</h4>
+          <pre>┌─────────────────────────┐
+│ Logo  |Menu |Sosmed      │
+│ © Hak Cipta & Disclaimer │
+└─────────────────────────┘</pre>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>I. Audio dan Musik</h3>
+      <table class="storyboard-table simple-table">
+        <thead><tr><th>Elemen</th><th>Deskripsi</th><th>Alasan Penggunaan</th></tr></thead>
+        <tbody>
+          <tr><td>Musik Latar</td><td>Instrumental ambient elektronik bertempo tenang</td><td>Membangun suasana modern & profesional tanpa mengganggu fokus membaca</td></tr>
+          <tr><td>Efek Klik</td><td>Bunyi "tap" pendek dan lembut</td><td>Memberi umpan balik bahwa aksi pengguna terdeteksi sistem</td></tr>
+          <tr><td>Efek Sukses</td><td>Nada naik dua-tiga not (chime)</td><td>Menandai transaksi/simulasi berhasil, memberi rasa pencapaian</td></tr>
+          <tr><td>Efek Notifikasi</td><td>Bunyi "ping" singkat</td><td>Menarik perhatian pengguna terhadap pesan/status baru</td></tr>
+          <tr><td>Efek Hover</td><td>Bunyi sangat halus/nyaris tak terdengar</td><td>Memperkuat rasa interaktif tanpa mengganggu pengalaman</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="konsep-block glass" data-aos="fade-up">
+      <h3>K. Alur Interaksi Pengguna</h3>
+      <div class="mermaid-wrap">
+        <pre class="mermaid-code">flowchart TD
+    A[Landing Page] --> B[Tentang PLN Mobile]
+    B --> C[Fitur PLN Mobile]
+    C --> D[Simulasi Interaktif]
+    D --> E[Tutorial]
+    E --> F[FAQ]
+    F --> G[Tips]
+    G --> H[Quiz Interaktif]
+    H --> I[Statistik]
+    I --> J[Kontak]
+    J --> K[Selesai]</pre>
+        <div class="flow-visual">
+          <div class="flow-node">Landing</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Tentang</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Fitur</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Simulasi</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Tutorial</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">FAQ</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Tips</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Quiz</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Statistik</div><div class="flow-arrow">↓</div>
+          <div class="flow-node">Kontak</div><div class="flow-arrow">↓</div>
+          <div class="flow-node flow-end">Selesai</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 11. FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo"><svg viewBox="0 0 100 100" width="30" height="30"><polygon points="55,2 20,58 45,58 40,98 82,40 55,40" fill="#FFD100"/></svg><span>PLN <strong>Mobile</strong></span></a>
+      <p>Microsite edukasi interaktif tidak resmi untuk keperluan Tugas Akhir mata kuliah Sistem Multimedia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigasi</h4>
+      <a href="#tentang">Tentang</a><a href="#fitur">Fitur</a><a href="#simulasi">Simulasi</a><a href="#quiz">Quiz</a>
+    </div>
+    <div class="footer-col">
+      <h4>Sosial Media</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>&copy; 2026 PLN Mobile Interactive Learning. Hak Cipta Dilindungi.</p>
+    <p class="disclaimer">Disclaimer: Website ini merupakan proyek akademik/edukasi non-komersial dan bukan merupakan aplikasi resmi PT PLN (Persero).</p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-chevron-up"></i></button>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
